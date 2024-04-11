@@ -1,39 +1,77 @@
 ---
 import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
+import Electron from "./icons/Electron.astro"
+import React from "./icons/React.astro"
+import Nodejs from "./icons/Nodejs.astro"
+import Typescript from "./icons/Typescript.astro"
+import Sqlite from "./icons/Sqlite.astro"
+import Mysql from "./icons/Mysql.astro"
+import Laravel from "./icons/Laravel.astro"
+import Adonis from "./icons/Adonis.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
+  ELECTRON: {
+    name: "Electron",
     class: "bg-black text-white",
-    icon: NextJS,
+    icon: Electron,
   },
-  TAILWIND: {
-    name: "Tailwind CSS",
+  REACT: {
+    name: "React",
     class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    icon: React,
+  },
+  NODEJS: {
+    name: "Node js",
+    class: "bg-[#005566] text-white",
+    icon: Nodejs,
+  },
+  TYPESCRIPT: {
+    name: "Typescript",
+    class: "bg-[#005582] text-white",
+    icon: Typescript,
+  },
+  SQLITE: {
+    name: "SQLite",
+    class: "bg-[#C0C0C0] text-black",
+    icon: Sqlite,
+  },
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-[#F5F5F5] text-black",
+    icon: Laravel,
+  },
+  MYSQL: {
+    name: "Mysql",
+    class: "bg-[#FFA500] text-black",
+    icon: Mysql,
+  },
+  ADONIS: {
+    name: "Adonis js",
+    class: "bg-[#9966CC] text-white",
+    icon: Adonis,
+  },
+  IONIC: {
+    name: "Ionic",
+    class: "bg-[#007AFF] text-white",
+    icon: React,
   },
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Order pad app",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Simplify bar operations with a mobile app for order taking, bill printing, and daily sales tracking, ensuring seamless customer service and financial management",
+    image: "/projects/comandera-app.png",
+    tags: [TAGS.REACT, TAGS.TYPESCRIPT,  TAGS.IONIC, TAGS.MYSQL, TAGS.LARAVEL],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "hardware store sales system",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Streamline hardware store operations with a comprehensive software solution for inventory management and sales tracking.",
+    image: "/projects/hardware-system.png",
+    tags: [ TAGS.ELECTRON ,TAGS.REACT, TAGS.TYPESCRIPT, TAGS.NODEJS, TAGS.ADONIS, TAGS.SQLITE],
   },
 ]
 ---
@@ -53,7 +91,7 @@ const PROJECTS = [
       {title}
     </h3>
     <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
+      <ul class="flex flex-row flex-wrap mb-2 gap-2">
           {tags.map((tag) => (
             <li>
               <span
